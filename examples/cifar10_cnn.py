@@ -14,11 +14,11 @@ from keras.layers import Dense, Dropout, Activation, Flatten
 from keras.layers import Conv2D, MaxPooling2D
 import os
 
-batch_size = 32
+batch_size = 64
 num_classes = 10
 epochs = 100
 data_augmentation = True
-num_predictions = 20
+num_predictions = 40
 save_dir = os.path.join(os.getcwd(), 'saved_models')
 model_name = 'keras_cifar10_trained_model.h5'
 
@@ -56,7 +56,7 @@ model.add(Dense(num_classes))
 model.add(Activation('softmax'))
 
 # initiate RMSprop optimizer
-opt = keras.optimizers.rmsprop(lr=0.0001, decay=1e-6)
+opt = keras.optimizers.rmsprop(lr=0.001, decay=1e-5)
 
 # Let's train the model using RMSprop
 model.compile(loss='categorical_crossentropy',
