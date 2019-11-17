@@ -33,5 +33,5 @@ def load_batch(fpath, label_key='labels'):
     data = d['data']
     labels = d[label_key]
 
-    data = data.reshape(data.shape[0], 3, 32, 32)
+    data = data.reshape(data.shape[0], 3, 64, 64)
     return data, labels
