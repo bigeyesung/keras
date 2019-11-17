@@ -21,11 +21,11 @@ seq.add(ConvLSTM2D(filters=40, kernel_size=(3, 3),
                    padding='same', return_sequences=True))
 seq.add(BatchNormalization())
 
-seq.add(ConvLSTM2D(filters=40, kernel_size=(3, 3),
+seq.add(ConvLSTM2D(filters=40, kernel_size=(5, 5),
                    padding='same', return_sequences=True))
 seq.add(BatchNormalization())
 
-seq.add(ConvLSTM2D(filters=40, kernel_size=(3, 3),
+seq.add(ConvLSTM2D(filters=40, kernel_size=(5, 5),
                    padding='same', return_sequences=True))
 seq.add(BatchNormalization())
 
